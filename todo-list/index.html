@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDoList😄</title>
+  <!-- Inter font for clean typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <!-- subtle background ornament -->
+    <div class="blob"></div>
+    
+    <header class="app-header">
+      <div class="header-top">
+        <h1>Tasks</h1>
+        
+      </div>
+      <p class="header-date" id="current-date"></p>
+    </header>
+
+    <!-- main input card + delete all row -->
+    <div class="input-card">
+      <form id="task-form" class="task-form">
+        <input 
+          type="text" 
+          id="task-input" 
+          placeholder="write a new task..." 
+          autocomplete="off"
+        >
+        <button type="submit" id="add-task-btn">
+          <i class="fa-solid fa-plus"></i>
+          <span>add task</span>
+        </button>
+      </form>
+      
+      <!-- delete all tasks button -->
+      <div class="delete-all-wrapper">
+        <button id="delete-all-btn" class="delete-all-btn" title="remove all tasks">
+          <i class="fa-regular fa-trash-can"></i>
+          <span>delete all</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- tasks grid: two columns -->
+    <div class="tasks-grid">
+      <!-- pending section -->
+      <section class="task-section" data-type="pending">
+        <div class="section-header">
+          <div class="title-wrapper">
+            <i class="fa-regular fa-circle"></i>
+            <h2>pending</h2>
+          </div>
+          <span class="counter" id="pending-counter">0</span>
+        </div>
+        <ul class="task-list" id="pending-list"></ul>
+        <div class="empty-state" id="pending-empty">
+          <i class="fa-regular fa-face-smile"></i>
+          <p>all clear. add a task above</p>
+        </div>
+      </section>
+
+      <!-- completed section -->
+      <section class="task-section" data-type="completed">
+        <div class="section-header">
+          <div class="title-wrapper">
+            <i class="fa-regular fa-circle-check"></i>
+            <h2>completed</h2>
+          </div>
+          <span class="counter" id="completed-counter">0</span>
+        </div>
+        <ul class="task-list" id="completed-list"></ul>
+        <div class="empty-state" id="completed-empty">
+          <i class="fa-regular fa-sparkles"></i>
+          <p>completed tasks will live here</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- footer -->
+    <footer class="app-footer">
+      <span>Created By</span>
+      <span class="dot">·</span>
+      <span>Mr. Tushar Dhongade</span>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-orb1"></div>
+<div class="bg-orb2"></div>
+<div class="bg-orb3"></div>
+<div class="grain"></div>
+
+<div class="wrapper">
+  
+  <div class="calc">
+    <div class="display">
+      <div class="display-top">
+        <span class="mode-tag">Standard</span>
+        <div class="expression" id="expression"></div>
+      </div>
+      <div class="display-bottom">
+        <div class="display-value" id="display">0</div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <button class="btn-clear" onclick="clearAll(this,event)">AC</button>
+      <button class="btn-del" onclick="deleteLast(this,event)">⌫</button>
+      <button class="btn-pct" onclick="inputOp('%',this,event)">%</button>
+      <button class="btn-op" onclick="inputOp('/',this,event)">÷</button>
+
+      <button class="btn-num" onclick="inputNum('7',this,event)">7</button>
+      <button class="btn-num" onclick="inputNum('8',this,event)">8</button>
+      <button class="btn-num" onclick="inputNum('9',this,event)">9</button>
+      <button class="btn-op" onclick="inputOp('*',this,event)">×</button>
+
+      <button class="btn-num" onclick="inputNum('4',this,event)">4</button>
+      <button class="btn-num" onclick="inputNum('5',this,event)">5</button>
+      <button class="btn-num" onclick="inputNum('6',this,event)">6</button>
+      <button class="btn-op" onclick="inputOp('-',this,event)">−</button>
+
+      <button class="btn-num" onclick="inputNum('1',this,event)">1</button>
+      <button class="btn-num" onclick="inputNum('2',this,event)">2</button>
+      <button class="btn-num" onclick="inputNum('3',this,event)">3</button>
+      <button class="btn-op" onclick="inputOp('+',this,event)">+</button>
+
+      <button class="btn-num btn-zero" onclick="inputNum('0',this,event)">0</button>
+      <button class="btn-dot" onclick="inputDot(this,event)">.</button>
+      <button class="btn-eq" onclick="calculate(this,event)">=</button>
+    </div>
+
+    <div class="bottom-bar">
+      <div class="pip active"></div>
+      <div class="pip"></div>
+      <div class="pip"></div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

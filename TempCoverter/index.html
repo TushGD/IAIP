@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temperature Converter</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="grain"></div>
+<div class="card">
+  <div class="label-tag">Task — 03</div>
+  <h1>Temp<span>era</span>ture<br>Converter</h1>
+  <p class="subtitle">Enter a value and select your unit to convert</p>
+
+  <span class="field-label">Enter Temperature</span>
+  <div class="input-row">
+    <div class="input-wrap">
+      <input type="number" id="tempInput" placeholder="0.00" step="any">
+      <span class="unit-badge" id="inputUnitBadge">°C</span>
+    </div>
+  </div>
+  <div class="error-msg" id="errorMsg">Please enter a valid number.</div>
+
+  <div class="divider"></div>
+
+  <span class="field-label">Convert From</span>
+  <div class="radio-group">
+    <div class="radio-option">
+      <input type="radio" name="unit" id="celsius" value="celsius" checked>
+      <label for="celsius"><span class="dot"></span>Celsius</label>
+    </div>
+    <div class="radio-option">
+      <input type="radio" name="unit" id="fahrenheit" value="fahrenheit">
+      <label for="fahrenheit"><span class="dot"></span>Fahrenheit</label>
+    </div>
+    <div class="radio-option">
+      <input type="radio" name="unit" id="kelvin" value="kelvin">
+      <label for="kelvin"><span class="dot"></span>Kelvin</label>
+    </div>
+  </div>
+
+  <button class="convert-btn" onclick="convert()">Convert</button>
+
+  <div class="result-area" id="resultArea">
+    <p class="placeholder-text" id="placeholder">Result will appear here</p>
+    <div id="resultContent" style="display:none;">
+      <p class="result-label">Converted To</p>
+      <div class="result-value" id="resultValue"></div>
+      <div class="result-unit" id="resultUnit"></div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
